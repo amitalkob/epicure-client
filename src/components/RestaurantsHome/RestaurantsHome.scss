@@ -1,0 +1,41 @@
+.rests-home-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 87px;
+
+  .rests-home-title {
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 1.25px;
+    margin-bottom: 42px;
+  }
+
+  .rests-home {
+    display: flex;
+    overflow-x: scroll;
+    gap: 11px;
+    margin-bottom: 31px;
+  }
+
+  .rests-home-button-cont {
+    display: flex;
+    align-self: end;
+    align-items: center;
+    cursor: pointer;
+
+    .rests-home-button {
+      font-size: 30px;
+      letter-spacing: 2px;
+      border: none;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      margin-right: 12px;
+      font-weight: normal;
+    }
+  }
+}

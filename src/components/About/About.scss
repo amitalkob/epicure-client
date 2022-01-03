@@ -1,0 +1,125 @@
+.about-container {
+  height: 605px;
+  padding: 28px 36px 0 35px;
+  opacity: 0.9;
+  background-color: #fafafa;
+
+  .about-title {
+    margin: 0 109px 7px 112px;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 0.88px;
+  }
+
+  .about-text-and-logo {
+    .about-text {
+      font-size: 14px;
+      font-weight: 100;
+      letter-spacing: 1.08px;
+      text-align: center;
+      margin-top: 7px;
+    }
+
+    .about-logo {
+      margin: 32px 83px 34px 84px;
+    }
+  }
+
+  .download {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 30px;
+
+    .download-container {
+      width: 127px;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 7px 7px;
+      gap: 10px;
+
+      .apple-icon {
+        width: 17px;
+        height: 21px;
+      }
+
+      .google-icon {
+        width: 14px;
+        height: 18px;
+        margin: 5px 15px 3px 3px;
+      }
+
+      .download-text {
+        font-size: 9px;
+        letter-spacing: 1px;
+
+        .store-type {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .about-container {
+    height: 526px;
+    padding: 65px 182px 0 182px;
+
+    .about-title {
+      margin: 65px 0 20px 0;
+      font-size: 30px;
+      letter-spacing: 1.89px;
+    }
+
+    .about-text-and-logo {
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+
+      .about-text {
+        font-size: 22px;
+        letter-spacing: 1.69px;
+        text-align: justify;
+        width: 567px;
+        margin-top: 20px;
+        margin-right: 98px;
+      }
+
+      .about-logo {
+        width: 178px;
+        height: 166px;
+      }
+    }
+
+    .download {
+      .download-container {
+        width: 181px;
+        padding: 10px 10px;
+        border-radius: 10px;
+
+        .apple-icon {
+          width: 23px;
+          height: 30px;
+        }
+
+        .google-icon {
+          width: 19px;
+          height: 25px;
+        }
+
+        .download-text {
+          font-size: 13px;
+
+          .store-type {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}

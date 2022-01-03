@@ -1,0 +1,27 @@
+.chef-slide-cont {
+  .chef-slide-first-title {
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 0.88px;
+    margin: 20px 0 19px 0;
+    text-align: left;
+  }
+
+  .chef-slide {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 600px) {
+  .chef-slide-cont {
+    width: 70%;
+
+    .chef-slide-first-title {
+      font-size: 30px;
+      letter-spacing: 1.29px;
+      margin-top: 0;
+    }
+  }
+}
