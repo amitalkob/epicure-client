@@ -14,7 +14,8 @@ const RestaurantPage = () => {
   useEffect(() => {
     (async () => {
       const rest = await axios(
-        "http://localhost:3001/api/v1/restaurants/" + state.id
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/restaurants/" +
+          state.id
       );
       setRestaurant(rest.data);
 
@@ -23,7 +24,7 @@ const RestaurantPage = () => {
       };
 
       const dishes = await axios.post(
-        "http://localhost:3001/api/v1/dishes/get-dishes-by-rest",
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/dishes/get-dishes-by-rest",
         qs.stringify({ restId: state.id }),
         { headers: headers }
       );

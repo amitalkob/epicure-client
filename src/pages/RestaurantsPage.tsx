@@ -10,7 +10,7 @@ const RestaurantsPage = () => {
   useEffect(() => {
     (async () => {
       const restaurants = await axios(
-        "http://localhost:3001/api/v1/restaurants"
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/restaurants"
       );
       setRestaurants(restaurants.data);
     })();

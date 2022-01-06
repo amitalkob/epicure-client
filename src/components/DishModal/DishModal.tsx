@@ -15,7 +15,10 @@ const DishModal: React.FC<Props> = ({ id }) => {
 
   useEffect(() => {
     (async () => {
-      const dish = await axios("http://localhost:3001/api/v1/dishes/" + id);
+      const dish = await axios(
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/dishes/" +
+          id
+      );
       setDish(dish.data);
     })();
   }, [id]);

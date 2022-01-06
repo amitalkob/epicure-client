@@ -56,9 +56,13 @@ const AddEditDish = () => {
         "Content-Type": "application/x-www-form-urlencoded",
       };
 
-      await axios.post("http://localhost:3001/api/v1/dishes", dish, {
-        headers: headers,
-      });
+      await axios.post(
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/dishes",
+        dish,
+        {
+          headers: headers,
+        }
+      );
     })();
   };
 
@@ -68,15 +72,22 @@ const AddEditDish = () => {
         "Content-Type": "application/x-www-form-urlencoded",
       };
 
-      await axios.put("http://localhost:3001/api/v1/dishes/" + id, dish, {
-        headers: headers,
-      });
+      await axios.put(
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/dishes/" +
+          id,
+        dish,
+        {
+          headers: headers,
+        }
+      );
     })();
   };
 
   useEffect(() => {
     (async () => {
-      const rests = await axios("http://localhost:3001/api/v1/restaurants");
+      const rests = await axios(
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/restaurants"
+      );
       setRests(rests.data);
     })();
   }, []);
@@ -84,7 +95,10 @@ const AddEditDish = () => {
   useEffect(() => {
     if (!isAddMode) {
       (async () => {
-        const res = await axios("http://localhost:3001/api/v1/dishes/" + id);
+        const res = await axios(
+          "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/dishes/" +
+            id
+        );
         const fields = ["name", "text", "pic", "icons", "price"];
         fields.forEach((field) => setValue(field, res.data[field]));
         setValue("restaurant", res.data.restaurant.name);

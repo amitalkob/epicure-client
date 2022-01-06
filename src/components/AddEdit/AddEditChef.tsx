@@ -40,7 +40,7 @@ const AddEditChef = () => {
       };
 
       await axios.post(
-        "http://localhost:3001/api/v1/chefs",
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/chefs",
         qs.stringify(chef),
         { headers: headers }
       );
@@ -54,7 +54,8 @@ const AddEditChef = () => {
       };
 
       await axios.put(
-        "http://localhost:3001/api/v1/chefs/" + id,
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/chefs/" +
+          id,
         qs.stringify(chef),
         { headers: headers }
       );
@@ -64,7 +65,10 @@ const AddEditChef = () => {
   useEffect(() => {
     if (!isAddMode) {
       (async () => {
-        const res = await axios("http://localhost:3001/api/v1/chefs/" + id);
+        const res = await axios(
+          "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/chefs/" +
+            id
+        );
         const fields = ["name", "description", "pic"];
         fields.forEach((field) => setValue(field, res.data[field]));
       })();

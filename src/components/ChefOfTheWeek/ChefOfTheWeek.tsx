@@ -18,7 +18,7 @@ const ChefOfTheWeek: React.FC<Props> = ({ chef }) => {
       };
 
       const res = await axios.post(
-        "http://localhost:3001/api/v1/restaurants/get-rests-by-chef",
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/restaurants/get-rests-by-chef",
         qs.stringify({ chefId: chef._id }),
         { headers: headers }
       );

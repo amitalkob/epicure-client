@@ -20,12 +20,19 @@ const Homepage = () => {
   useEffect(() => {
     (async () => {
       const restaurants = await axios(
-        "http://localhost:3001/api/v1/restaurants"
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/restaurants"
       );
-      const dishes = await axios("http://localhost:3001/api/v1/dishes");
-      const chefs = await axios("http://localhost:3001/api/v1/chefs");
+      const dishes = await axios(
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/dishes"
+      );
+      const chefs = await axios(
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/chefs"
+      );
       const id = chefs.data[0]._id;
-      const chef = await axios("http://localhost:3001/api/v1/chefs/" + id);
+      const chef = await axios(
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/chefs/" +
+          id
+      );
 
       setRestaurants(restaurants.data);
       setDishes(dishes.data);

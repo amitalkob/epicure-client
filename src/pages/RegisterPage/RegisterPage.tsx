@@ -24,7 +24,7 @@ const RegisterPage = () => {
         password: password,
       };
       const res = await axios.post(
-        "http://localhost:3001/api/v1/users/register",
+        "http://ec2-3-132-215-69.us-east-2.compute.amazonaws.com/api/v1/users/register",
         qs.stringify(details),
         { headers: headers }
       );
